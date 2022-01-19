@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/github.io/threejs-landing-portfolio/static/css/main.abf61da1.css",
+    "main.js": "/github.io/threejs-landing-portfolio/static/js/main.614bcc03.js",
+    "index.html": "/github.io/threejs-landing-portfolio/index.html",
+    "static/media/menu.svg": "/github.io/threejs-landing-portfolio/static/media/menu.40116e351fff02c7a8d16cdf09664064.svg",
+    "static/media/down.svg": "/github.io/threejs-landing-portfolio/static/media/down.64f35b578559d366f492450d29f05bd9.svg",
+    "main.abf61da1.css.map": "/github.io/threejs-landing-portfolio/static/css/main.abf61da1.css.map",
+    "main.614bcc03.js.map": "/github.io/threejs-landing-portfolio/static/js/main.614bcc03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abf61da1.css",
+    "static/js/main.614bcc03.js"
+  ]
+}
