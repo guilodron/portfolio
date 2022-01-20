@@ -22,5 +22,6 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-color: ${props => props.theme.background};
         font-family: 'Rubik Mono One', sans-serif;
+        overflow-x: hidden;
     }
 `;

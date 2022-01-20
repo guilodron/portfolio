@@ -22,7 +22,7 @@ export const Container = styled.div`
     @keyframes radiate{
         from {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(.1);
         }
         to {
             opacity: 0;
@@ -36,7 +36,8 @@ export const Container = styled.div`
         width: 4rem;
         border: 1px solid ${props => props.theme.default};
         border-radius: 50%;
-        animation: radiate 4s infinite;
+        animation: radiate 3s infinite;
+        box-shadow: 0 0 .5rem 0 ${props => props.theme.default}
     }
     svg {
         height: 2rem;

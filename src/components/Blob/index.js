@@ -11,7 +11,8 @@ const Blob = ({blobRef, theme}) => {
     const [hovered, setHovered] = useState(false)
 
     const animations = useSpring({
-        factor: hovered ? 1 : 0
+        factor: hovered ? 1 : 0,
+        color: theme === 'dark' ? 'blue' : 'white'
     })
 
     return (
@@ -28,15 +29,15 @@ const Blob = ({blobRef, theme}) => {
         >
           <Wobble
             attach='material'
-            color={theme === 'dark' ? 'blue' : 'white'}
+            color={animations.color}
             metalness={1}
             roughness={.30}
             factor={.2}
             speed={1.5}
             clipShadows    
           />
-          <spotLight position={[20, 0, 40]} />
-          <spotLight castShadow position={[-20, 0, 40]} intensity={1} />
+          <spotLight position={[20, 0, 42]} intensity={.6} />
+          <spotLight castShadow position={[-20, 0, 40]} intensity={.6} />
         </AnimatedSphere>
     );
   };

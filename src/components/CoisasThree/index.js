@@ -11,14 +11,14 @@ const CoisasThree = () => {
   return (
     <Canvas
       style={{
-        height: "100vh",
+        height: "120vh",
         width: "100vw",
         position: "absolute",
         top: 0,
         right: 0,
         zIndex: -1
       }}
-      camera={{ position: [0, 0, 20] }}
+      camera={{ position: [0, 0, 24] }}
     >
       <ContextBridge>
         <Scene />
