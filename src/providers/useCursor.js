@@ -5,30 +5,41 @@ const CursorContext = createContext()
 
 const CursorProvider = ({children}) => {
 
-    const [mousePos, setMousePos] = useState({x: 0, y: 0})
+    const [mousePos, setMousePos] = useState({x: '0', y: '0'})
     const [coordinates, setCoordinates] = useState({x: 0, y: 0})
     const [state, setState] = useState('default')
+    const [mobile, setMobile] = useState(false)
+    
 
     const changeState = (newState) => {
         setState(newState)
     }
 
-    useEffect(() => {
-        window.addEventListener('mousemove', (e) => {
-            setMousePos({x: e.pageX, y: e.pageY})
-            setCoordinates({
-                x: (e.pageX - window.innerWidth/2)/(window.innerWidth/2),
-                y: -(e.pageY - window.innerHeight/2)/(window.innerHeight/2)
-            })
-        })
+    const isMobile = () => {
+        const ua = navigator.userAgent;
+        return /Android|Mobi/i.test(ua);
+      };
 
-        return window.removeEventListener('mousemove', (e) => {
-            setMousePos({x: e.pageX, y: e.pageY})
-            setCoordinates({
-                x: (e.pageX - window.innerWidth/2)/(window.innerWidth/2),
-                y: -(e.pageY - window.innerHeight/2)/(window.innerHeight/2)
+    useEffect(() => {
+        if(!isMobile()){
+            window.addEventListener('mousemove', (e) => {
+                setMousePos({x: e.x, y: e.y})
+                setCoordinates({
+                    x: (e.pageX - window.innerWidth/2)/(window.innerWidth/2),
+                    y: -(e.pageY - window.innerHeight/2)/(window.innerHeight/2)
+                })
             })
-        })
+    
+            return window.removeEventListener('mousemove', (e) => {
+                setMousePos({x: e.pageX, y: e.pageY})
+                setCoordinates({
+                    x: (e.pageX - window.innerWidth/2)/(window.innerWidth/2),
+                    y: -(e.pageY - window.innerHeight/2)/(window.innerHeight/2)
+                })
+            })
+        } else {
+            setMobile(true)
+        }
     }, [])
   return (
       <CursorContext.Provider value={{
@@ -36,7 +47,7 @@ const CursorProvider = ({children}) => {
           coordinates,
           changeState
       }}>
-          <CustomCursor state={state} position={mousePos} />
+          {!mobile && <CustomCursor state={state} position={mousePos} />}
           {children}
       </CursorContext.Provider>
   )

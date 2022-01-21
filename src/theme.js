@@ -8,8 +8,8 @@ const lightTheme = {
 const darkTheme = {
     background: 'rgb(0,0,5)',
     default: 'white',
-    accent: 'black',
-    stroke: '-webkit-text-stroke: 1.11px #0000d2;'
+    accent: 'transparent',
+    stroke: '-webkit-text-stroke: 1.11px blue;'
 }
 
 export {lightTheme, darkTheme}

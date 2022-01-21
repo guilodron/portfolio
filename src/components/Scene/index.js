@@ -12,7 +12,7 @@ const Scene = () => {
 
     useFrame((state) => {
         const t = state.clock.getElapsedTime()/2
-        sphere.current.position.y = (1 + Math.sin(t / 1.5))
+        sphere.current.position.y = (1 + Math.sin(t / 1.5))/2
         sphere.current.rotation.x = -coordinates.y/5
         sphere.current.rotation.y = -.8 + coordinates.x/2
     })

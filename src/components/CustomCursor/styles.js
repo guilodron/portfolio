@@ -9,11 +9,11 @@ export const Container = styled.div`
             transform: rotate(360deg);
         }
     }
-    position: absolute;
+    pointer-events: none;
+    position: fixed;
     transform: translate(-50%, -50%) scale(${props => props.state === 'default' ? 1 : .8});
     height: 40px;
     width: 40px;
-    /* border: 1px solid blue; */
     z-index: 10;
     transition: transform .3s;
     div {

@@ -4,6 +4,7 @@ import Landing from "./pages/Landing";
 import { CursorProvider } from "./providers/useCursor";
 import { ThemeProviderReact } from "./providers/useTheme";
 import { GlobalStyles } from "./globalStyles";
+import Journey from "./pages/Journey";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <GlobalStyles />
         <Header />
         <Landing />
+        <Journey />
         <CoisasThree />
       </CursorProvider>
     </ThemeProviderReact>

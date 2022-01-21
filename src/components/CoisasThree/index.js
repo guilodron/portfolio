@@ -16,7 +16,7 @@ const CoisasThree = () => {
         position: "absolute",
         top: 0,
         right: 0,
-        zIndex: -1
+        zIndex: -1,
       }}
       camera={{ position: [0, 0, 24] }}
     >

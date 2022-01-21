@@ -1,5 +1,5 @@
 import { MeshWobbleMaterial, Sphere } from "@react-three/drei";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {a, useSpring} from '@react-spring/three'
 
@@ -9,16 +9,32 @@ const Blob = ({blobRef, theme}) => {
     const AnimatedSphere = a(Sphere)
 
     const [hovered, setHovered] = useState(false)
+    const [ready, setReady] = useState(false)
+    useEffect(() => {
+      setReady(true)
+    }, [])
 
     const animations = useSpring({
         factor: hovered ? 1 : 0,
-        color: theme === 'dark' ? 'blue' : 'white'
+        color: theme === 'dark' ? 'blue' : 'white',
+      })
+      
+      const slow = useSpring({
+      pos: ready ? 15 : 30,
+      scale: ready ? 1 : .3,
+      config: {
+        // duration: 1000,
+        tension: 30,
+        
+      }
     })
 
     return (
         <AnimatedSphere
           position={[15,0,0]} 
-          args={[15,20,16]} 
+          args={[15,20,16]}
+          position-x={slow.pos}
+          // scale={slow.scale}
           ref={blobRef}
           onPointerEnter={() => {
               setHovered(true)
