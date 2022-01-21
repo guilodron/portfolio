@@ -17,6 +17,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     body {
         background-color: ${props => props.theme.background};
         font-family: 'Rubik Mono One', sans-serif;

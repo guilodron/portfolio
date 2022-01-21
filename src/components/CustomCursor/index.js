@@ -5,10 +5,11 @@ const cursorText = {
     'default': ' HAVE FUN HAVE FUN HAVE FUN ',
     'clickable': ' CLICK ME! CLICK ME! CLICK ME! ',
     'scroll': ' SCROLL SCROLL SCROLL ',
+    'look': ' TAKE A LOOOK TAKE A LOOK ',
 }
 
 
-const CustomCursor = ({position, state}) => {
+const CustomCursor = ({position, state, color}) => {
 
     const [letterCircle, setLetterCircle]= useState([])
     const ref = useRef()
@@ -29,6 +30,7 @@ const CustomCursor = ({position, state}) => {
             }}
             ref={ref}
             state={state}
+            color={color}
         >
             <div>
                 {letterCircle}                

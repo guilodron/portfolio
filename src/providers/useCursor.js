@@ -8,6 +8,7 @@ const CursorProvider = ({children}) => {
     const [mousePos, setMousePos] = useState({x: '0', y: '0'})
     const [coordinates, setCoordinates] = useState({x: 0, y: 0})
     const [state, setState] = useState('default')
+    const [color, setColor] = useState('default')
     const [mobile, setMobile] = useState(false)
     
 
@@ -45,9 +46,10 @@ const CursorProvider = ({children}) => {
       <CursorContext.Provider value={{
           mousePos,
           coordinates,
-          changeState
+          changeState,
+          setColor
       }}>
-          {!mobile && <CustomCursor state={state} position={mousePos} />}
+          {!mobile && <CustomCursor color={color} state={state} position={mousePos} />}
           {children}
       </CursorContext.Provider>
   )

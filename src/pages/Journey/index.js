@@ -1,99 +1,79 @@
-import { motion, useElementScroll, useTransform, useViewportScroll } from 'framer-motion';
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Container, Timeline, Images, Pane } from './styles';
-import Bsb from '../../assets/brasilia.jpg'
-import Office from '../../assets/office.jpg'
-import Study from '../../assets/study.jpg'
 import { useCursor } from '../../providers/useCursor';
+import TranslatingTitle from '../../components/TranslatingTitle';
+import TimelineItem from '../../components/TimelineItem';
+import experience from './experience';
+
+import CJF from '../../assets/journey/cjf.jpg'
+import CJF2 from '../../assets/journey/cjf2.jpg'
+import TJ from '../../assets/journey/tj.jpg'
+import TJ2 from '../../assets/journey/tj2.png'
+import UNB from '../../assets/journey/unb.jpg'
+import UNB2 from '../../assets/journey/unb2.png'
+import STRUCT from '../../assets/journey/struct.jpeg'
+import STRUCT2 from '../../assets/journey/struct2.png'
+import BSB from '../../assets/journey/brasilia.jpg'
+import OFFICE from '../../assets/journey/office.jpg'
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Journey = () => {
-  const element = useRef(null)
-  const {scrollYProgress} = useViewportScroll()
-  const offset = useTransform(scrollYProgress, [0, 1], [-100, -500])
-  const offset2 = useTransform(scrollYProgress, [0, 1], [-500, 100])
-  
-  const {coordinates} = useCursor()
-  useEffect(() => {
-    // console.log(coordinates)
-  }, [coordinates])
+
+  const images = {
+    default: [BSB, OFFICE],
+    cjf: [CJF, CJF2],
+    unb: [UNB, UNB2],
+    tj: [TJ, TJ2 ],
+    struct: [STRUCT, STRUCT2 ],
+  }
+  const [selectedImage, setSelectedImage] = useState('default')
+  const {coordinates, changeState} = useCursor()
 
   return (
     <Container >
-      <motion.div 
-        ref={element}
-        style={{
-          translateX: offset
-        }}
-      >
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-      </motion.div>
-      <motion.div 
-        ref={element}
-        style={{
-          translateX: offset2
-        }}
-      >
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-        <h1>MY JOURNEY</h1>
-      </motion.div>
+      <TranslatingTitle />
       <Pane>
-        <Images>
-          <img 
-            src={Office}
-            style={{
-              transform: `translateX(${50 + -coordinates.x * 7}%) translateY(${coordinates.y * 7}%)`
-            }}
-            alt="" 
-            srcset="" 
-          />
-          <img 
-            src={Study}
-            style={{
-              transform: `translateY(${50 + coordinates.y * 3}%) translateX(${-30 + coordinates.x * 1}%)`,
-
-            }}
-            alt="" 
-            srcset="" 
-          />
+        <Images
+          onPointerEnter={() => changeState('look')}
+          onPointerLeave={() => changeState('default')}
+        >
+          <AnimatePresence>
+            <motion.img
+              whileHover={{filter: 'grayscale(0%)', zIndex:2}}
+              exit={{opacity: 0}}
+              animate={{opacity: 1}}
+              initial={{opacity: 0}}
+              src={images[selectedImage][0]}
+              key={images[selectedImage]}
+              style={{
+                transform: `translateX(${50 + -coordinates.x * 7}%) translateY(${coordinates.y * 7}%)`
+              }}
+              alt="picture ilustrating timeline" 
+            />
+            <motion.img
+              whileHover={{filter: 'grayscale(0%)'}}
+              exit={{opacity: 0}}
+              animate={{opacity: 1}}
+              initial={{opacity: 0}}
+              src={images[selectedImage][1]}
+              key={images[`${selectedImage+1}`]}
+              style={{
+                transform: `translateY(${50 + coordinates.y * 3}%) translateX(${-30 + coordinates.x * 1}%)`,
+              }}
+              alt="picture ilustrating timeline" 
+            />
+          </AnimatePresence>
         </Images>
         <Timeline>
-          <div>
-            <svg width="25" height="192" viewBox="0 0 25 192" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12.5" cy="179.5" r="10.5" stroke="black" stroke-width="4"/>
-              <line x1="12.5" x2="12.5" y2="170" stroke="black" stroke-width="3"/>
-            </svg>
-            <div>
-              <span>2020-2021</span>
-              <span>Bacharel em engenhrai da computacao</span>
-            </div>
-          </div>
-          <div>
-            <svg width="25" height="192" viewBox="0 0 25 192" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12.5" cy="179.5" r="10.5" stroke="black" stroke-width="4"/>
-              <line x1="12.5" x2="12.5" y2="170" stroke="black" stroke-width="3"/>
-            </svg>
-            <div>
-              <span>2020-2021</span>
-              <span>Bacharel em engenhrai da computacao</span>
-            </div>
-          </div>
-          <div>
-            <svg width="25" height="192" viewBox="0 0 25 192" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12.5" cy="179.5" r="10.5" stroke="black" stroke-width="4"/>
-              <line x1="12.5" x2="12.5" y2="170" stroke="black" stroke-width="3"/>
-            </svg>
-            <div>
-              <span>2020-2021</span>
-              <span>Bacharel em engenhrai da computacao</span>
-            </div>
-          </div>
+            {experience.map((item, index) => (
+                <TimelineItem 
+                  key={index}
+                  date={item.date}
+                  description={item.description}
+                  onPointerEnter={() => setSelectedImage(item.select)}
+                />
+            ))}
         </Timeline>
-
       </Pane>
     </Container>
     );

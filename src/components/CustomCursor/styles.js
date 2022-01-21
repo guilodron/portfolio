@@ -28,7 +28,8 @@ export const Container = styled.div`
             top: 50%;
             left: 50%;
             font-size: 1rem;
-            color: ${props => props.theme.default}
+            color: ${props => props.color === 'default' ? props.theme.default : props.color};
+            transition: color .2s;
         }
     }
 `;

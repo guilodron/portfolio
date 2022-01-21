@@ -5,16 +5,22 @@ import { CursorProvider } from "./providers/useCursor";
 import { ThemeProviderReact } from "./providers/useTheme";
 import { GlobalStyles } from "./globalStyles";
 import Journey from "./pages/Journey";
+import Work from "./pages/Work";
+import Transition from "./components/Transition";
 
 function App() {
   return (
     <ThemeProviderReact>
       <CursorProvider>
         <GlobalStyles />
+        <CoisasThree />
         <Header />
         <Landing />
         <Journey />
-        <CoisasThree />
+        <Transition />
+        <Work />
+        <Transition />
+
       </CursorProvider>
     </ThemeProviderReact>
   );
