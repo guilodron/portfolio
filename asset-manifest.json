@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/threejs-landing-portfolio/static/css/main.abf61da1.css",
-    "main.js": "/threejs-landing-portfolio/static/js/main.14227814.js",
+    "main.js": "/threejs-landing-portfolio/static/js/main.f22783ea.js",
+    "static/media/study.jpg": "/threejs-landing-portfolio/static/media/study.ef5df35be61b61a13cfd.jpg",
+    "static/media/brasilia.jpg": "/threejs-landing-portfolio/static/media/brasilia.def1426f934c7e73dc55.jpg",
+    "static/media/office.jpg": "/threejs-landing-portfolio/static/media/office.f62c2eaff5a7e9a0e293.jpg",
     "index.html": "/threejs-landing-portfolio/index.html",
-    "static/media/down.svg": "/threejs-landing-portfolio/static/media/down.64f35b578559d366f492450d29f05bd9.svg",
-    "main.abf61da1.css.map": "/threejs-landing-portfolio/static/css/main.abf61da1.css.map",
-    "main.14227814.js.map": "/threejs-landing-portfolio/static/js/main.14227814.js.map"
+    "main.f22783ea.js.map": "/threejs-landing-portfolio/static/js/main.f22783ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.abf61da1.css",
-    "static/js/main.14227814.js"
+    "static/js/main.f22783ea.js"
   ]
 }
