@@ -25,5 +25,9 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${props => props.theme.background};
         font-family: 'Rubik Mono One', sans-serif;
         overflow-x: hidden;
+        scrollbar-color: dark;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 `;

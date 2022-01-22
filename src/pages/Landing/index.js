@@ -1,14 +1,13 @@
 import React from "react";
 import ScrollIndicator from "./ScrollIndicator";
 import { Container, AnimatedContainer } from "./styles";
-import { AnimatePresence, motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const Landing = () => {
   const { scrollY } = useViewportScroll();
   const offset = useTransform(scrollY, [0, 500], [0, 200]);
 
   return (
-    <AnimatePresence>
       <Container
         initial={{opacity: 0}}
         animate={{opacity: 1}}
@@ -49,7 +48,6 @@ const Landing = () => {
         </motion.div>
         <ScrollIndicator />
       </Container>
-    </AnimatePresence>
   );
 };
 
