@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/threejs-landing-portfolio/static/js/main.a684ce20.js",
-    "static/media/artzy.png": "/threejs-landing-portfolio/static/media/artzy.4df983671ac5a174ff06.png",
-    "static/media/daniela.png": "/threejs-landing-portfolio/static/media/daniela.1873371620de3072e63a.png",
-    "static/media/unb2.png": "/threejs-landing-portfolio/static/media/unb2.8eb53b7f46e0ab1813fd.png",
-    "static/media/unb.jpg": "/threejs-landing-portfolio/static/media/unb.efd75494515b16e2d545.jpg",
-    "static/media/tj2.png": "/threejs-landing-portfolio/static/media/tj2.2f5ca45fa4ab14105ca7.png",
-    "static/media/brasilia.jpg": "/threejs-landing-portfolio/static/media/brasilia.def1426f934c7e73dc55.jpg",
-    "static/media/traineedex.png": "/threejs-landing-portfolio/static/media/traineedex.62acab1bb0c3e49b5f92.png",
-    "static/media/tj.jpg": "/threejs-landing-portfolio/static/media/tj.acda470fb055c857c582.jpg",
-    "static/media/cjf2.jpg": "/threejs-landing-portfolio/static/media/cjf2.51512126037bcc936733.jpg",
-    "static/media/office.jpg": "/threejs-landing-portfolio/static/media/office.f62c2eaff5a7e9a0e293.jpg",
-    "static/media/folio.png": "/threejs-landing-portfolio/static/media/folio.7df422ea938bdef0ad11.png",
-    "static/media/struct.jpeg": "/threejs-landing-portfolio/static/media/struct.d3cab43e7777fc4956f5.jpeg",
-    "static/media/cjf.jpg": "/threejs-landing-portfolio/static/media/cjf.5d33baaa35394668cb73.jpg",
-    "static/media/struct2.png": "/threejs-landing-portfolio/static/media/struct2.77052fe0deac4d868adb.png",
-    "index.html": "/threejs-landing-portfolio/index.html",
-    "main.a684ce20.js.map": "/threejs-landing-portfolio/static/js/main.a684ce20.js.map"
+    "main.js": "/portfolio/static/js/main.0766a35b.js",
+    "static/media/artzy.png": "/portfolio/static/media/artzy.4df983671ac5a174ff06.png",
+    "static/media/daniela.png": "/portfolio/static/media/daniela.1873371620de3072e63a.png",
+    "static/media/unb2.png": "/portfolio/static/media/unb2.8eb53b7f46e0ab1813fd.png",
+    "static/media/unb.jpg": "/portfolio/static/media/unb.efd75494515b16e2d545.jpg",
+    "static/media/tj2.png": "/portfolio/static/media/tj2.2f5ca45fa4ab14105ca7.png",
+    "static/media/brasilia.jpg": "/portfolio/static/media/brasilia.def1426f934c7e73dc55.jpg",
+    "static/media/traineedex.png": "/portfolio/static/media/traineedex.62acab1bb0c3e49b5f92.png",
+    "static/media/tj.jpg": "/portfolio/static/media/tj.acda470fb055c857c582.jpg",
+    "static/media/cjf2.jpg": "/portfolio/static/media/cjf2.51512126037bcc936733.jpg",
+    "static/media/office.jpg": "/portfolio/static/media/office.f62c2eaff5a7e9a0e293.jpg",
+    "static/media/folio.png": "/portfolio/static/media/folio.7df422ea938bdef0ad11.png",
+    "static/media/struct.jpeg": "/portfolio/static/media/struct.d3cab43e7777fc4956f5.jpeg",
+    "static/media/cjf.jpg": "/portfolio/static/media/cjf.5d33baaa35394668cb73.jpg",
+    "static/media/struct2.png": "/portfolio/static/media/struct2.77052fe0deac4d868adb.png",
+    "index.html": "/portfolio/index.html",
+    "main.0766a35b.js.map": "/portfolio/static/js/main.0766a35b.js.map"
   },
   "entrypoints": [
-    "static/js/main.a684ce20.js"
+    "static/js/main.0766a35b.js"
   ]
 }
