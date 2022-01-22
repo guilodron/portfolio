@@ -11,7 +11,7 @@ export const Container = styled.div`
     }
     pointer-events: none;
     position: fixed;
-    transform: translate(-50%, -50%) scale(${props => props.state === 'default' ? 1 : .8});
+    transform: translate(-50%, -50%) scale(${props => props.state === 'default' || props.state === 'shy' ? 1 : .8});
     height: 40px;
     width: 40px;
     z-index: 10;

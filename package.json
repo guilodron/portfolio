@@ -1,6 +1,6 @@
 {
   "name": "portifolio-v1",
-  "homepage": "https://guilodron.github.io/threejs-landing-portfolio",
+  "homepage": "https://guilodron.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

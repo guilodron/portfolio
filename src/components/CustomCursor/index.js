@@ -6,6 +6,7 @@ const cursorText = {
     'clickable': ' CLICK ME! CLICK ME! CLICK ME! ',
     'scroll': ' SCROLL SCROLL SCROLL ',
     'look': ' TAKE A LOOOK TAKE A LOOK ',
+    'shy': " DON'T BE SHY DON'T BE SHY "
 }
 
 

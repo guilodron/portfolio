@@ -3,7 +3,7 @@ import React from 'react';
 import { useCursor } from '../../providers/useCursor';
 import { useTheme } from '../../providers/useTheme';
 import { Container } from './styles';
-import {FiSun, FiMoon, FiMenu} from 'react-icons/fi'
+import {FiSun, FiMoon} from 'react-icons/fi'
 
 const Header = () => {
 
@@ -17,24 +17,10 @@ const Header = () => {
   return (
       <Container>
           <ul>
-              {/* <motion.li
-                animate={{opacity: 1}}
-                initial={{opacity: 0}}
-                transition={{delay: 3.2}}
-              >
-                  <a 
-                    onPointerEnter={() => {changeState('clickable')}} 
-                    onPointerLeave={() => {changeState('default')}} 
-                    onClick={handleClick} 
-                    href="."
-                  >
-                    <FiMenu color={tema === 'dark' ? 'white' : 'black'} size={24}/>
-                  </a>
-              </motion.li> */}
               <motion.li
                 animate={{opacity: 1}}
                 initial={{opacity: 0}}
-                transition={{delay: 3.8}}
+                transition={{delay: 2.8}}
               >
                   <a
                     onPointerEnter={() => {changeState('clickable')}} 

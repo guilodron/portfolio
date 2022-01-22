@@ -7,6 +7,7 @@ import { GlobalStyles } from "./globalStyles";
 import Journey from "./pages/Journey";
 import Work from "./pages/Work";
 import Transition from "./components/Transition";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -19,8 +20,7 @@ function App() {
         <Journey />
         <Transition />
         <Work />
-        <Transition />
-
+        <Contact />
       </CursorProvider>
     </ThemeProviderReact>
   );
