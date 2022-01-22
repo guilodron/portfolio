@@ -8,7 +8,7 @@ const images = [
         id: 0,
         path: 'folio',
         call: 'Portfolio',
-        ref: 'https://guilodron.github.io/threejs-landing-portfolio/'
+        ref: 'https://guilodron.github.io/portfolio/'
     },
     {
         id: 1,
