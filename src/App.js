@@ -13,10 +13,10 @@ function App() {
     <ThemeProviderReact>
       <CursorProvider>
         <GlobalStyles />
-          {!loaded ?
-          <Loading setLoaded={setLoaded} /> :
+          {/* {!loaded ?
+          <Loading setLoaded={setLoaded} /> : */}
           <Layout />
-        }
+        {/* } */}
       </CursorProvider>
     </ThemeProviderReact>
   );
